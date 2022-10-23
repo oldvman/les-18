@@ -1,3 +1,6 @@
+
+/*css les 18 */
+
 #content {
   display: flex;
 }
@@ -88,6 +91,7 @@
 /* header */
   .header {
     height:33%;
+    background-color: lightred;
     background-image: url(../afbeeldingen/bussum.jpg);
     background-size: cover;
     background-position: bottom;
