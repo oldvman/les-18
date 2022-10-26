@@ -5,6 +5,11 @@
   display: flex;
 }
 
+.center {
+  height: 150px;
+  line-height: 150px;
+}
+
 [class*="col-"] {
   width: 100%;
 }
@@ -14,7 +19,6 @@
     float: left;
     padding: 15px;
   }
-
   .col-1 {
     width: 8.33%;
   }
@@ -62,16 +66,20 @@
   .col-12 {
     width: 100%;
   }
+}
 
   .titeltekst {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
+    color: white;
   }
 
   .broodtekst {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
+    color: white;
+    width: 90%;
   }
 
   .footertekst {
@@ -88,35 +96,24 @@
     color: white;
   }
 
-/* header */
-  .header {
-    height:33%;
-    background-color: lightred;
-    background-image: url(../afbeeldingen/bussum.jpg);
-    background-size: cover;
-    background-position: bottom;
-    font-size: 45px;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 10px;
+  h1{
     font-family: 'Roboto', sans-serif;
   }
 
-@  media only screen and (max-width: 767px) {
-    .header {
-    background-image: url(../afbeeldingen/bussum-klein.jpg);
-    font-size: 20px;
-    color: white;
-  }
-}
+.header {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../afbeeldingen/bussum-klein.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height:150px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+   }
 
-/* lijstje */
 .lijst {
   background-color: olive;
-  min-height: 600px;
-  border-right: 8px;
-  border-color: white;
+  min-height: auto;
 }
 
 .lijst ul {
@@ -137,8 +134,9 @@
 }
 
 .lijst .titel{
-    color: darkred;
-    font-size: larger;
+    color: yellow;
+    font-size: smaller;
+    font-family: 'roboto', sans-serif;
 }
 
 .lijst .titel:hover{
@@ -146,36 +144,13 @@
 }
 
 .lijst a {
-  font-family: sans-serif;
+  font-family: 'roboto', sans-serif;
   text-decoration: none;
   color: white;
 }
 
-
-
-footer {
-  width: 100%;
-  min-height:20%;
-  background-color: darkslateblue;
-}
-
-#een {
-  width: 20%;
-  min-height: 150px;
-  background-color: green;
-}
-
 .titelblok {
-  height: 100px;
-  color: white;
-}
-
-.titeltekst{
-  color: white;
-}
-
-.broodtekst{
-  color: white;
+  height: 75px;
 }
 
 .container{
@@ -188,21 +163,67 @@ background-color:sienna;
 }
 
 .divtwee {
-  margin-top: 15px;
-  padding-left: 25px;
   background-color: inherit;
+  padding-left: 25px;
 }
 
 .fotoeen {
   float: right;
+  vertical-align: middle;
 }
 
 .fototwee {
   float: right;
+  vertical-align: middle;
 }
 
 img {
   width: 150px;
-  height: 150px;
+  height:150px;
   object-fit: scale-down;
+}
+
+footer {
+  width: 100%;
+  min-height:20%;
+  background-color: darkslateblue;
+}
+
+/* Mobiel hierboven
+
+deze wit-ruimte is voor mij om te zien 
+of ik in mobiele gedeelte of desktp gedeelte werk 
+
+Desktop hieronder*/
+
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height:33%;
+    background-image: url(../afbeeldingen/bussum.jpg);
+    font-size: 45px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .titeltekst {
+    font-size: 24px;
+  }
+
+  .broodtekst {
+    font-size: 18px;
+    width: auto;
+  }
+
+  .lijst {
+    min-height: 600px;
+  }
+
+  .lijst .titel{
+    font-size: larger;
+  }
+
+  .titelblok {
+    height: 100px;
+  }
 }
